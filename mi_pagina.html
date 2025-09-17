@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apuntes de su Delegado: Introducción a los Patrones de Diseño de Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <h1 class="text-3xl font-bold text-white text-center">Apuntes de su Delegado: Introducción a los Patrones de Diseño de Software</h1>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Card: ¿Qué es un Patrón? -->
+            <div class="section-card bg-gray-800 rounded-lg p-6">
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">¿Qué es un Patrón?</h2>
+                <p class="text-gray-300">
+                    Podría definirse como una serie de variables y constantes identificables dentro de un conjunto mayor de datos. Es una solución recurrente a un problema que ocurre con frecuencia.
+                </p>
+            </div>
+
+            <!-- Card: Pattern Language -->
+            <div class="section-card bg-gray-800 rounded-lg p-6 md:col-span-2">
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Pattern Language (Lenguaje de Patrones)</h2>
+                <p class="mb-4 text-gray-300">El concepto nació en la arquitectura en 1977 con Christopher Alexander. Un "lenguaje de patrones" es un método para describir buenas prácticas de diseño dentro de un campo de especialización.</p>
+                <div class="bg-gray-700 p-4 rounded-md">
+                    <h3 class="font-semibold text-lg text-white mb-2">Elementos de un Patrón:</h3>
+                    <ul class="list-disc list-inside space-y-1 text-gray-300">
+                        <li><strong class="text-cyan-300">Nombre:</strong> Para identificarlo rápidamente.</li>
+                        <li><strong class="text-cyan-300">Problema:</strong> El contexto en el que se aplica.</li>
+                        <li><strong class="text-cyan-300">Fuerzas:</strong> Las restricciones o metas a considerar.</li>
+                        <li><strong class="text-cyan-300">Solución:</strong> La descripción de cómo resolver el problema.</li>
+                        <li><strong class="text-cyan-300">Beneficios / Consecuencias:</strong> Los resultados de aplicar el patrón.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Card: Los Inicios -->
+            <div class="section-card bg-gray-800 rounded-lg p-6 lg:col-span-3">
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Software Design Pattern: Los Inicios</h2>
+                <p class="text-gray-300">
+                    La idea se aplicó a la programación por primera vez en la conferencia <strong class="text-white">OOPSLA de 1987</strong>. Los programadores <strong class="text-white">Kent Beck</strong> y <strong class="text-white">Ward Cunningham</strong> tomaron las ideas del arquitecto Christopher Alexander y las aplicaron al diseño de interfaces de usuario en SmallTalk, proponiendo que un "lenguaje de patrones" guía al diseñador de software con soluciones funcionales.
+                </p>
+            </div>
+
+            <!-- Card: GoF -->
+            <div class="section-card bg-gray-800 rounded-lg p-6 md:col-span-2">
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">La Llegada del "Gang of Four" (GoF)</h2>
+                <p class="text-gray-300 mb-4">En 1994, Erich Gamma, Richard Helm, Ralph Johnson y John Vlissides publicaron el libro fundamental "Design Patterns: Elements of Reusable Object-Oriented Software". Recopilaron y documentaron 23 patrones que eran soluciones comunes y exitosas.</p>
+                <blockquote class="border-l-4 border-cyan-400 pl-4 text-gray-400 italic">
+                    "Un patrón describe un problema el cual ocurre una y otra vez en nuestro ambiente, y además describen el núcleo de la solución a tal problema, de tal manera que puedes usar esta solución millones de veces, sin hacer lo mismo dos veces."
+                </blockquote>
+            </div>
+
+            <!-- Card: Conexión Calidad -->
+            <div class="section-card bg-gray-800 rounded-lg p-6">
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Calidad y los "WTFs/Minute"</h2>
+                <p class="text-gray-300">
+                    La métrica humorística "WTFs/Minute" (confusiones por minuto) ilustra el valor de los patrones. Un buen código, usando patrones, es predecible y claro, reduciendo los "WTFs" y aumentando la calidad.
+                </p>
+            </div>
+            
+            <!-- Card: Clasificación -->
+            <div class="lg:col-span-3 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="section-card bg-gray-800 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-green-400 mb-3">1. Creacionales</h3>
+                    <p class="mb-3 text-gray-300">Se enfocan en cómo crear objetos de forma flexible, ocultando la lógica de creación.</p>
+                    <p class="text-sm text-gray-400">Builder, Factory Method, Prototype, Singleton, Abstract Factory.</p>
+                </div>
+                <div class="section-card bg-gray-800 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-blue-400 mb-3">2. Estructurales</h3>
+                    <p class="mb-3 text-gray-300">Tratan sobre cómo componer clases y objetos en estructuras más grandes.</p>
+                    <p class="text-sm text-gray-400">Adapter, Bridge, Composite, Decorator, Façade, Flyweight, Proxy.</p>
+                </div>
+                <div class="section-card bg-gray-800 rounded-lg p-6">
+                    <h3 class="text-xl font-bold text-purple-400 mb-3">3. De Comportamiento</h3>
+                    <p class="mb-3 text-gray-300">Se ocupan de la comunicación y responsabilidades entre objetos.</p>
+                    <p class="text-sm text-gray-400">Chain of Responsibility, Command, Interpreter, Iterator, Mediator, Memento, Observer, State, Strategy, Template Method, Visitor.</p>
+                </div>
+            </div>
+
+            <!-- Card: Beneficios -->
+            <div class="section-card bg-gray-800 rounded-lg p-6 md:col-span-2">
+                <h2 class="text-2xl font-semibold text-cyan-400 mb-4">Beneficios Principales</h2>
+                <ul class="space-y-3">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span><strong class="text-white">Elementos Reusables:</strong> Soluciones probadas para distintos problemas.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span><strong class="text-white">Efectividad Comprobada:</strong> Reducen riesgos y tiempo de desarrollo.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span><strong class="text-white">Vocabulario Común:</strong> Formalizan un lenguaje compartido entre desarrolladores.</span>
+                    </li>
+                     <li class="flex items-start">
+                        <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span><strong class="text-white">Estandarización:</strong> Ayudan a que las soluciones sean más predecibles.</span>
+                    </li>
+                     <li class="flex items-start">
+                        <svg class="w-6 h-6 text-green-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span><strong class="text-white">Facilitan el Aprendizaje:</strong> Transmiten el conocimiento ya existente.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Card: Resumen Final -->
+            <div class="section-card bg-cyan-900 border border-cyan-700 rounded-lg p-6">
+                <h2 class="text-2xl font-semibold text-cyan-300 mb-4">Resumen Final: Puntos Clave</h2>
+                <ul class="list-disc list-inside space-y-2 text-cyan-200">
+                    <li>Describen cómo resolver <strong class="text-white">problemas recurrentes</strong>.</li>
+                    <li>Ofrecen <strong class="text-white">soluciones generalizadas</strong> en forma de plantillas.</li>
+                    <li>Es más importante <strong class="text-white">comprender el concepto</strong> que memorizar la implementación exacta.</li>
+                    <li>Los 23 patrones del GoF se clasifican en: <strong class="text-white">Creacionales, Estructurales y de Comportamiento.</strong></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 mt-12">
+        <div class="container mx-auto px-6 py-4 text-center text-gray-400">
+            <p>&copy; 2025. Un resumen interactivo sobre Patrones de Diseño de Software de su delegado.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
